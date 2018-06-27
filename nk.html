@@ -13,12 +13,20 @@
   }
   .container {
     position: relative;
-    text-align: center;
+    text-align:left;
     color:mediumslateblue;
-   
-    display: block;
+   display: auto;
   
   }
+  .container2 {
+    position: relative;
+    text-align: right;
+    color:mediumslateblue;
+   display: auto;
+  
+  }
+
+
   .show-img-overlay {
     position: relative;
     bottom: 60px;
@@ -110,9 +118,21 @@
                 display: block;
             }
         }
+        
+
         .words {
-          color:rgb(0, 0, 0);
-          font-size:30px;
+          color:black;
+          font-size:20px;
+          border: 3px solid rgba(223, 139, 197, 0.938);
+          border-radius:2px;
+          margin:7px; 
+
+        }
+        .mas{
+          color:red;
+          font-size: 15px;
+          text-align:center;
+
         }
 </style>
 <body>
@@ -130,20 +150,23 @@
         <a href="#" class="link">recommendations</a>
     </div>
 </div>
+<p></p>
 <div class="words"> thanks for choosing us to help you. if your arent sure what the problem is click on the picture that looks most like your problem and its a direct link to figure out what exact the issue is.
   
-
+<p></p>
 </div>
-
-  <div class="container">
-    <img src="https://s3.amazonaws.com/bottega-devcamp/browser-js/laptop.jpg" class="site-img" alt="Laptop">
+<div class="container">
+    <img src="https://s3.amazonaws.com/bottega-devcamp/browser-js/another-laptop.jpg" class="site-img" alt="Laptop">
     <div class="hide-img-overlay">problem 1</div>
   </div>
-
-  <div class="container">
-    <img src="https://s3.amazonaws.com/bottega-devcamp/browser-js/another-laptop.jpg" class="site-img" alt="Laptop">
-    <div class="hide-img-overlay">problem 2</div>
-  </div>
+  <div class="container2">
+      <img src="https://s3.amazonaws.com/bottega-devcamp/browser-js/another-laptop.jpg" class="site-img" alt="Laptop">
+      <div class="hide-img-overlay">problem 2</div>
+    </div>
+ <div class= "mas">
+   If you dont see your problem please contact us.helpsos@hotmail
+ </div>
+  
 
 </body>
 
