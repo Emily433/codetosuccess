@@ -1,191 +1,210 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
-  <meta charset='UTF-8'>
-  <title></title>
+    <meta charset='UTF-8'>
+    <title></title>
 </head>
 <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
 
 <style>
+    img {
+        width: 400px;
+    }
 
-  img {
-    width: 400px;
-  }
-  .container {
-    position: relative;
-    text-align:left;
-    color:mediumslateblue;
-   display: auto;
-  
-  }
-  .container2 {
-    position: relative;
-    text-align: right;
-    color:mediumslateblue;
-   display: auto;
-  
-  }
+    .container {
+        position: relative;
+        text-align: left;
+        color: mediumslateblue;
+        display: auto;
+
+    }
+
+    .container2 {
+        position: relative;
+        text-align: right;
+        color: mediumslateblue;
+        display: auto;
+
+    }
 
 
-  .show-img-overlay {
-    position: relative;
-    bottom: 60px;
-    font-size: 21px;
-    font-family: Arial, Helvetica, sans-serif;
-   
-  }
-  .hide-img-overlay {
-    position: relative;
-    bottom: 60px;
-    font-size: 21px;
-    color:turquoise;
-  }
-  html {
-            font-family: 'Oxygen', sans-serif;
-        }
-        body {
-            margin: 0px;
-        }
+    .show-img-overlay {
+        position: relative;
+        bottom: 60px;
+        font-size: 21px;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    .hide-img-overlay {
+        position: relative;
+        bottom: 60px;
+        font-size: 21px;
+        color: turquoise;
+    }
+
+    html {
+        font-family: 'Oxygen', sans-serif;
+    }
+
+    body {
+        margin: 0px;
+    }
+
+    .navbar {
+        background: deepskyblue;
+    }
+
+    .navbar div {
+        display: none;
+    }
+
+    .navbar .toggle,
+    .navbar .brand {
+        display: inline-block;
+    }
+
+    .navbar .link {
+        display: block;
+        text-align: center;
+        padding: 1em;
+        text-decoration: none;
+        background: gold;
+        color: white;
+    }
+
+    .navbar .link:hover,
+    .navbar .link:active {
+        color: honeydew;
+        background: white;
+    }
+
+    .navbar .brand {
+        width: 10em;
+        text-align: center;
+        padding: 1em;
+        color: white;
+    }
+
+    .navbar a {
+        text-decoration: none;
+    }
+
+    .navbar .toggle {
+        padding: 1em;
+        color: black;
+    }
+
+    @media (min-width: 48em) {
         .navbar {
-            background:deepskyblue;
+            display: flex;
         }
-        .navbar div {
-            display: none;
-        }
-        .navbar .toggle,
-        .navbar .brand {
-            display: inline-block;
+        .navbar .left,
+        .navbar .right {
+            display: flex;
+            flex: 1;
         }
         .navbar .link {
-            display: block;
-            text-align: center;
-            padding: 1em;
-            text-decoration: none;
-            background:gold;
-            color: white;
-             }
-        .navbar .link:hover,
-        .navbar .link:active {
-            color:honeydew;
-            background: white;
+            width: auto;
         }
-        .navbar .brand {
-            width: 10em;
-            text-align: center;
-            padding: 1em;
-            color:white;
-        }
-        .navbar a {
-            text-decoration: none;
+        .navbar .right {
+            justify-content: flex-end;
         }
         .navbar .toggle {
-            padding: 1em;
-            color: black;
+            display: none;
         }
-        @media (min-width: 48em) {
-            .navbar {
-                display: flex;
-            }
-            .navbar .left,
-            .navbar .right {
-                display: flex;
-                flex: 1;
-            }
-            .navbar .link {
-                width: auto;
-            }
-            .navbar .right {
-                justify-content: flex-end;
-            }
-            .navbar .toggle {
-                display: none;
-            }
-        }
-        @media (min-width: 48em) {
-            .navbar div {
-                display: flex;
-            }
-        }
-        @media (max-width: 48em) {
-            .navbar.active .toggle {
-                background: #223047;
-                color:rgb(141, 129, 131);
-            }
-            .navbar .brand {
-                text-align: left;
-            }
-            .navbar.active div {
-                display: block;
-            }
-        }
-        
+    }
 
-        .words {
-          color:black;
-          font-size:20px;
-          border: 3px solid rgba(223, 139, 197, 0.938);
-          border-radius:2px;
-          margin:7px; 
-
+    @media (min-width: 48em) {
+        .navbar div {
+            display: flex;
         }
-        .mas{
-          color:red;
-          font-size: 15px;
-          text-align:center;
+    }
 
+    @media (max-width: 48em) {
+        .navbar.active .toggle {
+            background: #223047;
+            color: rgb(141, 129, 131);
         }
+        .navbar .brand {
+            text-align: left;
+        }
+        .navbar.active div {
+            display: block;
+        }
+    }
+
+
+    .words {
+        color: black;
+        font-size: 20px;
+        border: 3px solid rgba(223, 139, 197, 0.938);
+        border-radius: 2px;
+        margin: 7px;
+
+    }
+
+    .mas {
+        color: red;
+        font-size: 15px;
+        text-align: center;
+
+    }
 </style>
+
 <body>
-  
-  <div class="navbar">
-    <a href="#" class="toggle" id="navHamburger">
-        <i class="fas fa-bars"></i>
-    </a>
-    <a href="#" class="brand">Emily's help center</a>
-    <div class="left">
-        <a href="#" class="link">locations</a>
-        <a href="#" class="link">help</a>
+
+    <div class="navbar">
+        <a href="#" class="toggle" id="navHamburger">
+            <i class="fas fa-bars"></i>
+        </a>
+        <a href="#" class="brand">Emily's help center</a>
+        <div class="left">
+            <a href="#" class="link">locations</a>
+            <a href="#" class="link">help</a>
+        </div>
+        <div class="right">
+            <a href="#" class="link">recommendations</a>
+        </div>
     </div>
-    <div class="right">
-        <a href="#" class="link">recommendations</a>
+    <p></p>
+    <div class="words"> thanks for choosing us to help you. if your arent sure what the problem is click on the picture that looks most like
+        your problem and its a direct link to figure out what exact the issue is.
+
+        <p></p>
     </div>
-</div>
-<p></p>
-<div class="words"> thanks for choosing us to help you. if your arent sure what the problem is click on the picture that looks most like your problem and its a direct link to figure out what exact the issue is.
-  
-<p></p>
-</div>
-<div class="container">
-    <img src="https://s3.amazonaws.com/bottega-devcamp/browser-js/another-laptop.jpg" class="site-img" alt="Laptop">
-    <div class="hide-img-overlay">problem 1</div>
-  </div>
-  <div class="container2">
-      <img src="https://s3.amazonaws.com/bottega-devcamp/browser-js/another-laptop.jpg" class="site-img" alt="Laptop">
-      <div class="hide-img-overlay">problem 2</div>
+    <div class="container">
+        <img src="https://s3.amazonaws.com/bottega-devcamp/browser-js/another-laptop.jpg" class="site-img" alt="Laptop">
+        <div class="hide-img-overlay">problem 1</div>
     </div>
- <div class= "mas">
-   If you dont see your problem please contact us.helpsos@hotmail
- </div>
-  
+    <div class="container2">
+        <img src="https://s3.amazonaws.com/bottega-devcamp/browser-js/another-laptop.jpg" class="site-img" alt="Laptop">
+        <div class="hide-img-overlay">problem 2</div>
+    </div>
+    <div class="mas">
+        If you dont see your problem please contact us.helpsos@hotmail
+    </div>
+
 
 </body>
 
 <script>
-  const img = document.getElementsByClassName('site-img')[0];
-  img.addEventListener('click', (e) => {
-    debugger;
-  });
-  const imgs = document.querySelectorAll('.site-img');
-  imgs.forEach(img => {
-    img.addEventListener('mouseover', (event) => {
-      const captionElement = event.target.parentElement.children[1];
-      captionElement.className = 'show-img-overlay';
+    const img = document.getElementsByClassName('site-img')[0];
+    img.addEventListener('click', (e) => {
+        debugger;
     });
-  });
-  imgs.forEach(img => {
-    img.addEventListener('mouseout', (event) => {
-      const captionElement = event.target.parentElement.children[1];
-      captionElement.className = 'hide-img-overlay';
+    const imgs = document.querySelectorAll('.site-img');
+    imgs.forEach(img => {
+        img.addEventListener('mouseover', (event) => {
+            const captionElement = event.target.parentElement.children[1];
+            captionElement.className = 'show-img-overlay';
+        });
     });
-  });
+    imgs.forEach(img => {
+        img.addEventListener('mouseout', (event) => {
+            const captionElement = event.target.parentElement.children[1];
+            captionElement.className = 'hide-img-overlay';
+        });
+    });
 </script>
