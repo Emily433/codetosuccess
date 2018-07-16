@@ -1,13 +1,21 @@
 .library-course {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, ifr);
-    grid-template-rows: 1fr 1fr;
-  
-    &__title {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-rows: 1fr 1fr;
+  background: cornflowerblue;
+
+  &__title-check {
       grid-row: 1/2;
-    }
-    &__description {
-      grid-row: 2/3;
-    }
+      display: flex;
   }
+  &__arrow {
+      grid-row: 1/2;
+  }
+  &__action {
+    grid-row: 1/2;
+  }
+  &__description {
+      grid-row: 2/3;
+  }
+}
   

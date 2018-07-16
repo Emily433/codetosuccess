@@ -1,6 +1,8 @@
 import React,{Commponent} from 'react';
 
 import Gradient from '../src/components/gradient';
+import ScheduleCourse from './scheduleCourse';
+import ProgressTracker from'./progressTracker';
 class Schedule extends Commponent {
     render() {
         return (
@@ -11,6 +13,7 @@ class Schedule extends Commponent {
             </div>
         )
     }
+    
 }
 
 export default Schedule;

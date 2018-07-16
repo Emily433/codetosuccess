@@ -1,4 +1,10 @@
 @import'variables';
+@import 'library';
+@import 'arrow';
+@import 'schedule';
+@import 'scheduleCourse';
+@import 'progressTracker';
+
 .home {
     height: 100vh;
     width: 100vw;
@@ -8,10 +14,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
   }
-  .library {
-    grid-column: library-s/library-e;
-    background: cornflowerblue;
-}
+ 
 
 .schedule {
     grid-column: schedule-s/schedule-e;
