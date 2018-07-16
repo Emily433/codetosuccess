@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-
+import * as actions from '../../actions';
 import Action from "../action";
 import Arrow from "../arrow";
+import { connect } from "net";
 
-
+{ this.props.title }
 class LibraryCourse extends Component {
   render() {
     return (
@@ -13,19 +14,16 @@ class LibraryCourse extends Component {
           {Icon("fas fa-check", "library-course__icon")}
         </div>
         <Arrow className="library-course__arrow" /> 
-        <Action className="lobrary-course_action"/>
+        <Action onClick={()=>this.props.toggleEnrolled(this.props.id)} className="library-course_action"/>
         <div className="library-course__description">
           <label>Course Description</label>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-            fringilla facilisis mi, non pellentesque metus consectetur vel.
-            Quisque dictum, lectus vitae dignissim tincidunt, sapien nibh
-            placerat diam, quis blandit enim nulla in felis.
+          { this.props.description }
           </p>
         </div>
       </div>
     );
   }
 }
-
-export default LibraryCourse;
+<Action onClick={this.props.toggleEnrolled} className="library-course__action"/>
+export default connect(null, [toggledEnrolled])(LibraryCourse);

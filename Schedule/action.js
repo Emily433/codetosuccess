@@ -11,5 +11,6 @@ class Action extends Component {
     )
   }
 }
-
 export default Arrow;
+<button onClick={() => this.props.onClick()} className={`${this.props.className} action`}>
+</button>
