@@ -16,21 +16,25 @@ export function fetchCourses() {
         payload: [
             {
                 id:0,
+                enrolled:false,
                 title: "Up and Running with Redis",
                 description: "In this course you'll learn how to work with the efficient Redis database to manage key / value relationships."
+               
             }, 
-            enrolled: false
+            
             {
                 id:1,
+                enrolled:false,
                 title: "HTML/CSS Bootcamp",
                 description: "Learn HTML5 and CSS3 from scratch, starting with the basics and finishing by building five projects from scratch."
-                enrolled:false
+                
             },
             {
                 id:2,
+                enrolled:false,
                 title: "UX for Developers",
                 description: "This User Experience (UX) course examines how to develop a system for approaching application development and enhancing the experience for users."
-                enrolled:false
+                
             },
             {
                 title: 'Problem Solving',
@@ -63,3 +67,7 @@ export function fetchCourses() {
         ]
     }
 }
+id:10;
+title: "dumb descriptiom";
+description: "its just very dumb";
+enrolled:false;
