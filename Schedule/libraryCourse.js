@@ -30,44 +30,43 @@ class LibraryCourse extends Component {
       document
         .getElementById("library-course")
         .classList.add("library-course-selected");
-    } else {
-      document
-        .getElementById("library-course")
-        .classList.remove("library-course-selected");
     }
+     else 
+    {
+      document.getElementById("library-course")
+    .classList.remove("library-course-selected")}
+      
+      
     this.setState({ status });
-  }.bind(this);
-
-  render() `this.id = library-course-${this.props.id}`
+     $bind(this);
+  render() 
+  {
+    this.id = `library-course-${this.props.id}`;
     return (
       <div id={this.id} className="library-course">
-      <div id="library-course" className="library-course">
         <div className="library-course__title-check">
-          <label className="library-course__title">{this.props.title}</label>
-          {Icon("fas fa-check", "library-course__icon")}
+          <div className="library-course__title">{this.props.title}</div>
+          { this.props.enrolled ? Icon("fas fa-check", "library-course__icon") : ''}
         </div>
-        </div>
-        </div>
-        <div className="library-course__line" />
         <Arrow
           callback={status => this.handleCallback(status)}
           id={this.props.id}
           className="library-course__arrow"
         />
         <Action
+          id={this.props.id}
           onClick={() => this.props.toggleEnrolled(this.props.id)}
-          className="library-course__action"
+          className={`library-course__action ${this.props.enrolled ? 'action-remove' : ''}`}
         />
+        </div>
+
+  
+        
         <AnimateHeight>
         <div className="library-course_description">
         <label> Course description</label>
         <p>{this.props.description}</p>
         </div>
         </AnimateHeight> 
+    }
     
-        let height = this.state.height == 0 ? 'auto' : 0;
-
-export default connect(
-  null,
-  actions
-)(LibraryCourse);
