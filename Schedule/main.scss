@@ -10,11 +10,13 @@
     height: 100vh;
     width: 100vw;
   
-
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: [library-s] 1fr 1fr [scheudule-s] 50px [library-e] 1fr [schedule-e]
     grid-template-rows: 1fr;
-  }
+
+    
+    
+  
  
 
 .schedule {
