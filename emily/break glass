@@ -1,0 +1,19 @@
+render() `this.id = library-course-${this.props.id}`
+    return (
+      <div id={this.id} className="library-course">
+      <div id="library-course" className="library-course">
+        <div className="library-course__title-check">
+          <label className="library-course__title">{this.props.title}</label>
+          {Icon("fas fa-check", "library-course__icon")}
+        </div>
+        </div>
+        </div>
+        <div className="library-course__line" />
+        <Arrow
+          callback={status => this.handleCallback(status)}
+          id={this.props.id}
+          className="library-course__arrow"
+        />
+        <Action
+          onClick={() => this.props.toggleEnrolled(this.props.id)}
+          className="library-course__action"
