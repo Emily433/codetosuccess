@@ -1,7 +1,6 @@
 import React,{Component}from 'react'
-class HeaderWrapper extends Component{
-    render(){
-        return (
+export function Header (){
+    return (
             <div className='header-wrapper'>
             <h1 className='header-wrapper_title'> Welcome!</h1>
             <p className= 'header-wrapper_subtitle'> Login to countinue</p>
@@ -9,5 +8,5 @@ class HeaderWrapper extends Component{
             </div>
         )
     }
-}
+    
 export default HeaderWrapper;
