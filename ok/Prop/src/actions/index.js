@@ -1,12 +1,9 @@
 import {
-    signUp
+    signUp,
+    signIn
 } from './auth';
 
 export {
-    signUp
+    signUp,
+    signIn
 };
-import auth from './authReducer';
-const rootReducer = combineReducers({
-    form,
-    auth
-});
