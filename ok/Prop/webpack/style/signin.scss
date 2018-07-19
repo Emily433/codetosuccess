@@ -1,0 +1,23 @@
+.sign-in {
+    grid-row: content-s/content-e;
+    grid-column: content-s/content-e;
+}
+.sign-in-form {
+    display: grid;
+    justify-items: center;
+
+    &__title {
+    }
+    &__email {
+
+    }
+    &__password {
+
+    }
+}
+.sign-in-form {
+    &__email, 
+    &__password {
+        transform: translateX(-64.5px);
+    }
+}
