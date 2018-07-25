@@ -5,10 +5,12 @@ class TabNav extends Component {
     return (
       <div className="tab-nav">
         <div className="tab-nav__tabs">
-          {this.props.tabs.map((tab, index) => {
-            return <a className="tab-nav__tab">{tab.title}</a>;
-          })}
-        </div>
+        {this.props.tabs.map((tab, index) => {
+          const className = `tab-nav__tab ${tab.active ? 'tab-nav__active' : ''}`
+          return <a key={index} onClick={() => this.props.handleClick(tab.title)} className={className}>{tab.title}</a>
+        })}
+          </div>
+
         <div className="tab-nav__componet">
           {this.props.tabs.map((tab, index) => {
             if (tab.active) {
