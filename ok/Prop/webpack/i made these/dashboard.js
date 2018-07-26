@@ -14,7 +14,8 @@ class Dashboard extends Component {
                 {
                     title: 'Newsletter',
                     active: true,
-                    component: <h4>Hey There - Newsletter</h4>
+                    component: <NewsletterGrid history ={this.props.history}/>
+                    
                 },
                 {
                     title: 'Requests',

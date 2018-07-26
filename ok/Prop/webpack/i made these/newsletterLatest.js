@@ -13,7 +13,7 @@ function Button({className, callback, text, icon}) {
 class NewsletterLatest extends Component {
 
     handleEdit = () => {
-        console.log('trying to handle edit');
+        this.props.history.push('/newsletter/edit')
     }
 
     render() {

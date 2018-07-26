@@ -13,16 +13,15 @@ class NewsletterGrid extends Component {
             date: new Date(),
             imageUrl: 'http://via.placeholder.com/960x258'
         }
-
         return (
             <div className='newsletter-grid'>
-                
-                <Button className='newsletter-grid__button' icon='fas fa-plus'/>
+                <Button className='newsletter-grid__button' icon='fas fa-plus' callback={() => this.handleAddNewsletter()}/>
                 <NewsletterBox date={new Date()}/>
                 <NewsletterArchive/>
-                <NewsletterLatest {...latest}/>
+                <NewsletterLatest history={this.props.history} {...latest}/>
             </div>
         )
+        
     }
 }
 handleAddNewsletter = () => {
